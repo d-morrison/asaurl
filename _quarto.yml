@@ -1,0 +1,64 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - Chapters/Chapter-01.Rmd
+    - Chapters/Chapter-02.Rmd
+    - Chapters/Chapter-03.Rmd
+    - Chapters/Chapter-04.Rmd
+    - Chapters/Chapter-05.Rmd
+    - Chapters/Chapter-06.Rmd
+    - Chapters/Chapter-07.Rmd
+    - Chapters/Chapter-08.Rmd
+    - Chapters/Chapter-09.Rmd
+    - Chapters/Chapter-10.Rmd
+    - Chapters/Chapter-11.Rmd
+    - Chapters/Chapter-12.Rmd
+
+website:
+  title: "Applied Survival Analysis Using R"
+  repo-url: https://github.com/d-morrison/asaurl
+  repo-actions: [issue, source]
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Chapters"
+        menu:
+          - text: "Chapter 1"
+            href: Chapters/Chapter-01.Rmd
+          - text: "Chapter 2"
+            href: Chapters/Chapter-02.Rmd
+          - text: "Chapter 3"
+            href: Chapters/Chapter-03.Rmd
+          - text: "Chapter 4"
+            href: Chapters/Chapter-04.Rmd
+          - text: "Chapter 5"
+            href: Chapters/Chapter-05.Rmd
+          - text: "Chapter 6"
+            href: Chapters/Chapter-06.Rmd
+          - text: "Chapter 7"
+            href: Chapters/Chapter-07.Rmd
+          - text: "Chapter 8"
+            href: Chapters/Chapter-08.Rmd
+          - text: "Chapter 9"
+            href: Chapters/Chapter-09.Rmd
+          - text: "Chapter 10"
+            href: Chapters/Chapter-10.Rmd
+          - text: "Chapter 11"
+            href: Chapters/Chapter-11.Rmd
+          - text: "Chapter 12"
+            href: Chapters/Chapter-12.Rmd
+    right:
+      - icon: github
+        href: https://github.com/d-morrison/asaurl
+        aria-label: GitHub
+
+bibliography: [book.bib, packages.bib]
+
+format:
+  html:
+    document-css: true
+    toc: true
+    number-sections: true

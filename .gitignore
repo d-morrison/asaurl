@@ -1,8 +1,7 @@
 .Rhistory
 _book/
+_site/
 .Rproj.user/
-_bookdown_files/
-_book/
 *.rda
 
 Chapters/man/ashkenazi.Rd
@@ -20,3 +19,7 @@ Chapters/man/pancreatic2.Rd
 Chapters/man/pharmacoSmoking.Rd
 
 Chapters/man/prostateSurvival.Rd
+
+**/*.quarto_ipynb
+
+/.quarto/
