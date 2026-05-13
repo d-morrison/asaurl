@@ -66,12 +66,14 @@ jobs:
         uses: browser-actions/setup-chrome@v1
   
       - uses: r-lib/actions/setup-renv@v2
+        if: ${{ hashFiles('renv.lock') != '' }}
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         with:
           bypass-cache: never
 
       - name: Install local package
+        if: ${{ hashFiles('DESCRIPTION') != '' }}
         run: |
           R CMD INSTALL .
 
@@ -103,19 +105,19 @@ jobs:
 
       - name: Render pdf (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:pdf')
-        run: quarto render --profile website --to pdf
+        run: quarto render --profile website --to pdf --no-execute
 
       - name: Render docx (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:docx')
-        run: quarto render --profile website --to docx --no-clean
+        run: quarto render --profile website --to docx --no-clean --no-execute
 
       - name: Render revealjs (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:revealjs')
-        run: quarto render --profile website --to revealjs --no-clean
+        run: quarto render --profile website --to revealjs --no-clean --no-execute
 
       - name: Render html (website profile)
         if: github.event.action != 'closed' # skip the build if the PR has been closed
-        run: quarto render --profile website --to html --no-clean
+        run: quarto render --profile website --to html --no-clean --no-execute
 
       - name: list files
         if: github.event.action != 'closed'
