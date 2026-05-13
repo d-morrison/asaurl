@@ -9,10 +9,3 @@ description: "Notes and exercise solutions for Applied Survival Analysis Using R
 # Introduction
 
 Notes and exercise solutions for the book **Applied Survival Analysis Using R** by *Dirk F. Moore*.
-
-```{r include=FALSE}
-
-knitr::write_bib(c(
-  .packages(), "knitr", "rmarkdown"
-), "packages.bib")
-```
