@@ -2,7 +2,6 @@
 _book/
 _site/
 .Rproj.user/
-_bookdown_files/
 *.rda
 
 Chapters/man/ashkenazi.Rd

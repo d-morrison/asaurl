@@ -1,7 +1,7 @@
 ---
 title: "Applied Survival Analysis Using R"
 author: "Christian Kruse"
-date: "`r Sys.Date()`"
+date: today
 link-citations: true
 description: "Notes and exercise solutions for Applied Survival Analysis Using R."
 ---
