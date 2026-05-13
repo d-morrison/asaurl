@@ -136,7 +136,7 @@ jobs:
           if [ -f "renv.lock" ]; then
             quarto render --profile website --to html --no-clean
           else
-            quarto render --profile website --to html --no-clean --no-execute
+            quarto render index.qmd --to html --no-clean --no-execute
           fi
 
       - name: list files
