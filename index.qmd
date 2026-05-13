@@ -13,6 +13,6 @@ Notes and exercise solutions for the book **Applied Survival Analysis Using R** 
 ```{r include=FALSE}
 
 knitr::write_bib(c(
-  .packages(), 'knitr', 'rmarkdown'
-), 'packages.bib')
+  .packages(), "knitr", "rmarkdown"
+), "packages.bib")
 ```
