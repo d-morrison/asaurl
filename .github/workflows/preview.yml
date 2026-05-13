@@ -105,19 +105,39 @@ jobs:
 
       - name: Render pdf (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:pdf')
-        run: quarto render --profile website --to pdf --no-execute
+        run: |
+          if [ -f "renv.lock" ]; then
+            quarto render --profile website --to pdf
+          else
+            quarto render --profile website --to pdf --no-execute
+          fi
 
       - name: Render docx (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:docx')
-        run: quarto render --profile website --to docx --no-clean --no-execute
+        run: |
+          if [ -f "renv.lock" ]; then
+            quarto render --profile website --to docx --no-clean
+          else
+            quarto render --profile website --to docx --no-clean --no-execute
+          fi
 
       - name: Render revealjs (website profile)
         if: github.event.action != 'closed' && contains(github.event.pull_request.labels.*.name, 'preview:revealjs')
-        run: quarto render --profile website --to revealjs --no-clean --no-execute
+        run: |
+          if [ -f "renv.lock" ]; then
+            quarto render --profile website --to revealjs --no-clean
+          else
+            quarto render --profile website --to revealjs --no-clean --no-execute
+          fi
 
       - name: Render html (website profile)
         if: github.event.action != 'closed' # skip the build if the PR has been closed
-        run: quarto render --profile website --to html --no-clean --no-execute
+        run: |
+          if [ -f "renv.lock" ]; then
+            quarto render --profile website --to html --no-clean
+          else
+            quarto render --profile website --to html --no-clean --no-execute
+          fi
 
       - name: list files
         if: github.event.action != 'closed'
