@@ -1,5 +1,7 @@
 .Rhistory
 _book/
+.quarto/
+_site/
 .Rproj.user/
 _bookdown_files/
 _book/
@@ -20,3 +22,6 @@ Chapters/man/pancreatic2.Rd
 Chapters/man/pharmacoSmoking.Rd
 
 Chapters/man/prostateSurvival.Rd
+
+/.quarto/
+**/*.quarto_ipynb

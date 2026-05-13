@@ -1,0 +1,18 @@
+---
+title: "Applied Survival Analysis Using R"
+author: "Christian Kruse"
+date: "`r Sys.Date()`"
+link-citations: true
+description: ""
+---
+
+# Introduction
+
+Notes and exercise solutions for the book **Applied Survival Analysis Using R** by *Dirk F. Moore*.
+
+```{r include=FALSE}
+
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
