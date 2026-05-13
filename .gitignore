@@ -23,5 +23,6 @@ Chapters/man/pharmacoSmoking.Rd
 
 Chapters/man/prostateSurvival.Rd
 
-/.quarto/
 **/*.quarto_ipynb
+
+/.quarto/
