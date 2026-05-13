@@ -66,14 +66,14 @@ jobs:
         uses: browser-actions/setup-chrome@v1
   
       - uses: r-lib/actions/setup-renv@v2
-        if: ${{ hashFiles('renv.lock') != '' }}
+        if: hashFiles('renv.lock') != ''
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         with:
           bypass-cache: never
 
       - name: Install local package
-        if: ${{ hashFiles('DESCRIPTION') != '' }}
+        if: hashFiles('DESCRIPTION') != ''
         run: |
           R CMD INSTALL .
 

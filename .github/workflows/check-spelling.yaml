@@ -25,5 +25,5 @@ jobs:
         run: echo "RENV_CONFIG_AUTOLOADER_ENABLED=FALSE" >> $GITHUB_ENV
 
       - name: Run Spelling Check test
-        if: ${{ hashFiles('DESCRIPTION') != '' }}
+        if: hashFiles('DESCRIPTION') != ''
         uses: insightsengineering/r-spellcheck-action@v3.0.2
